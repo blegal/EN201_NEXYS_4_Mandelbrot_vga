@@ -63,7 +63,7 @@ architecture Behavioral of VGA_bitmap_640x480 is
        return ram_name;                                                  
 	end function;                                                
 
-	signal screen        : GRAM := ram_function_name("../mandelbrot.bin"); -- the memory representation of the image
+	signal screen        : GRAM; -- := ram_function_name("../mandelbrot.bin"); -- the memory representation of the image
 
 	signal h_counter     : integer range 0 to 3199:=0;     -- counter for H sync. (size depends of frequ because of division)
 	signal v_counter     : integer range 0 to 520 :=0;     -- counter for V sync. (base on v_counter, so no frequ issue)
